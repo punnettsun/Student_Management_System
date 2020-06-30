@@ -7,9 +7,7 @@
 #          can easily update or query information for any student.
 
 ## Add:
-# 1. Query search
-#       - get assignment score for particular student
-# 2. CSV file
+# 1. CSV file
 
 
 class StudentManagement(object):
@@ -60,7 +58,7 @@ class StudentManagement(object):
 
     def make_file(self):
         name_file = input("What do you want to name your file?: ")
-        my_file = open(name_file+".csv","w")
+        my_file = open(name_file+".txt","w")
         for key in self.student_dict:
             my_file.write(key)
             my_file.write(":")
