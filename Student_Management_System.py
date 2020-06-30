@@ -54,7 +54,20 @@ class StudentManagement(object):
                 self.student_dict[student_id][assignment_name] = value
         print(self.student_dict)
 
+    def query(self, student_id):
+        """ Returns a student's grading information for all assignments """
+        print(self.student_dict[student_id])
 
+    def make_file(self):
+        name_file = input("What do you want to name your file?: ")
+        my_file = open(name_file+".csv","w")
+        for key in self.student_dict:
+            my_file.write(key)
+            my_file.write(":")
+            str_dict = str(self.student_dict[key])
+            my_file.write(str_dict)
+            my_file.write("\n")
+        my_file.close()
 
 new = StudentManagement()
 print("ADDED 3 students")
@@ -67,4 +80,8 @@ print("ADDED new Quiz assignment")
 new.add_new_assignment('Quiz 1')
 print("\n")
 print("UPDATED score for student Student_1")
-new.update(student_id = 'Student_1',assignment_name = 'Quiz 1',value = 100)
+new.update(student_id = 'Punit',assignment_name = 'Quiz 1',value = 100)
+print("\n")
+print("QUERY for student")
+new.query("Punit")
+new.make_file()
