@@ -1,6 +1,6 @@
 # Student_Management_System.py
 # Author: Punit Sundar
-# Last Updated: June 28, 2020
+# Last Updated: July 22, 2020
 # Purpose: Write an object-oriented program for managing students in a class.
 #          This system helps keep track of project team info, assignments,
 #          team project report, and exams. Using this system, the instructor
@@ -8,7 +8,6 @@
 
 ## Add:
 # 1. CSV file
-import pandas as pd
 
 class StudentManagement(object):
 
